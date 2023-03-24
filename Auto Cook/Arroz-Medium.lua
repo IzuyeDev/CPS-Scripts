@@ -30,11 +30,12 @@ function masukin(x,y,id)
     SendPacketRaw(packet)
 end
 
+log("`2Start Cooking")
 while cook==true do 
     if cekInv(rice_id) > 20 and cekInv(chicken_id) > 20 and cekInv(onion_id) > 20 and cekInv(tomato_id) > 20 and cekInv(salt_id) > 20 and cekInv(pepper_id) > 38 then
         posx = math.floor(GetLocal().pos_x/32)
         posy = math.floor(GetLocal().pos_y/32)
-        Sleep(2000)
+        Sleep(1000)
 
         for i = 1,3,1 do
             masukin_med(posx+i,posy,rice_id)
@@ -215,6 +216,6 @@ while cook==true do
         log("`cBahan-bahan kurang, pastikan bahan bahan cukup")
         Sleep(500)
         log("`4Stopping")
-		Sleep(500)
+	Sleep(500)
     end
 end
