@@ -23,7 +23,7 @@ while true do
         num|53785|
         x|]]..xpos..[[|
         y|]]..ypos..[[|
-        buttonClicked|dlconvert]])
+        buttonClicked|bglconvert]])
         Sleep(delay)
     end
     SendPacket(2,[[action|dialog_return
