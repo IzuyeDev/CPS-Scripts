@@ -203,11 +203,11 @@ while true do
         end
         for i = 1,3,1 do
             masukin(posx-i,posy-1,18)
-            Sleep(500)
+            Sleep(400)
         end
         for i = 1,3,1 do
             masukin(posx-i,posy-2,18)
-            Sleep(300)
+            Sleep(400)
         end
     end
 end
