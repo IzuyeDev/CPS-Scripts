@@ -5,6 +5,7 @@ tomato_id = 962
 salt_id = 4568
 pepper_id = 4570
 
+cook = true
 function masukin_med(posX,posY,id)
     SendPacket(2,"action|dialog_return\ndialog_name|homeoven_edit\nx|"..posX.."|\ny|"..posY.."|\ncookthis|"..id.."|\nbuttonClicked|med")
 end
@@ -33,7 +34,7 @@ while true do
     if cekInv(rice_id) > 20 and cekInv(chicken_id) > 20 and cekInv(onion_id) > 20 and cekInv(tomato_id) > 20 and cekInv(salt_id) > 20 and cekInv(pepper_id) > 38 then
         posx = math.floor(GetLocal().pos_x/32)
         posy = math.floor(GetLocal().pos_y/32)
-        Sleep(500)
+        Sleep(2000)
 
         for i = 1,3,1 do
             masukin_med(posx+i,posy,rice_id)
@@ -209,7 +210,8 @@ while true do
             masukin(posx-i,posy-2,18)
             Sleep(400)
         end
+    else
+        log("Bahan-bahan kurang, pastikan bahan bahan cukup")
+        cook = false
     end
 end
-
-
